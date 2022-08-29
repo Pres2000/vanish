@@ -1,0 +1,11 @@
+<h1>List of Vans</h1>
+
+
+<% @vans.each do |van| %>
+  <h2> <%= van.listing_title %> </h2>
+  <p> <%= van.description %> </p>
+  <% van.photos.each do |photo| %>
+    <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+  <% end %>
+
+<% end %>
