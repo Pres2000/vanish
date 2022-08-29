@@ -75,3 +75,9 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+gem "devise"
+gem "cloudinary"
+gem "faker"
+gem "open-uri"
+gem "simple_form", github: "heartcombo/simple_form"
