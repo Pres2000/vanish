@@ -1,0 +1,27 @@
+<div class="card" style="width: 18rem;">
+  <%= cl_image_tag(@van.photos.first.key, class: "card-img-top") %>
+  <!-- trying to use cl_tag to select first photo
+  <img class="card-img-top" src="<% @van.photos.first %>" alt="photo of <% @van.listing_title %>">
+  -->
+  <div class="card-body">
+    <!-- here we need to get information from the back end to populate our cards -->
+    <h5 class="card-title"><%= @van.listing_title %></h5>
+    <p class="card-text"><%= @van.description %></p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <!-- add font-awesome icon before each value (for bath/kitchen add line-through if false) -->
+    <li class="list-group-item"><i class="fa-solid fa-users"></i><%= @van.capacity %></li>
+    <li class="list-group-item"><i class="fa-solid fa-arrows-maximize"></li><%= @van.dimentions %></li>
+    <li class="list-group-item"><i class="fa-solid fa-bus-simple"></i><%= @van.model %></li>
+    <li class="list-group-item"><%= @van.year %></li>
+    <li class="list-group-item"><i class="fa-solid fa-steering-wheel"></i><%= @van.mileage %></li>
+    <li class="list-group-item"><i class="fa-solid fa-gas-pump"></i><%= @van.fuel_type %></li>
+    <li class="list-group-item"><i class="fa-solid fa-location-dot"></i><%= @van.location %></li>
+    <li class="list-group-item"><i class="fa-solid fa-toilet"></i>Bathroom</li>
+    <li class="list-group-item"><i class="fa-solid fa-oven"></i>kitchen</li>
+  </ul>
+  <div class="card-body">
+    <a href="#" class="card-link">Rent</a>
+    <a href="#" class="card-link"><i class="fa-solid fa-euro-sign"></i><%= @van.cost %></a>
+  </div>
+</div>
