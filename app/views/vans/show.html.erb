@@ -6,20 +6,24 @@
     -->
     <div class="card-body">
       <!-- here we need to get information from the back end to populate our cards -->
-      <h5 class="card-title"><%= @van.listing_title %></h5>
-      <p class="card-text"><%= @van.description %></p>
+      <h1 class="card-title"><%= @van.listing_title %></h1>
+      <h4 class="card-text"><%= @van.description %></h4>
     </div>
-    <ul class="list-group list-group-flush">
+    <ul class="list">
+      <div>
+        <li class="list-group-item"><i class="fa-solid fa-users"></i><%= @van.capacity %></li>
+        <li class="list-group-item"><i class="fa-solid fa-arrows-left-right"></i><%= @van.dimentions %></li>
+        <li class="list-group-item"><i class="fa-solid fa-bus-simple"></i><%= @van.model %></li>
+        <li class="list-group-item"><i class="fa-solid fa-calendar"></i><%= @van.year %></li>
+        <li class="list-group-item"><i class="fa-solid fa-gauge-high"></i><%= @van.mileage %></li>
+      </div>
+      <div>
+        <li class="list-group-item"><i class="fa-solid fa-gas-pump"></i><%= @van.fuel_type %></li>
+        <li class="list-group-item"><i class="fa-solid fa-location-dot"></i><%= @van.location %></li>
+        <li class="list-group-item"><i class="fa-solid fa-toilet"></i>Bathroom</li>
+        <li class="list-group-item"><i class="fa-solid fa-sink"></i></i>kitchen</li>
+      </div>
       <!-- add font-awesome icon before each value (for bath/kitchen add line-through if false) -->
-      <li class="list-group-item"><i class="fa-solid fa-users"></i><%= @van.capacity %></li>
-      <li class="list-group-item"><i class="fa-solid fa-arrows-left-right"></i><%= @van.dimentions %></li>
-      <li class="list-group-item"><i class="fa-solid fa-bus-simple"></i><%= @van.model %></li>
-      <li class="list-group-item"><%= @van.year %></li>
-      <li class="list-group-item"><i class="fa-solid fa-gauge-high"></i><%= @van.mileage %></li>
-      <li class="list-group-item"><i class="fa-solid fa-gas-pump"></i><%= @van.fuel_type %></li>
-      <li class="list-group-item"><i class="fa-solid fa-location-dot"></i><%= @van.location %></li>
-      <li class="list-group-item"><i class="fa-solid fa-toilet"></i>Bathroom</li>
-      <li class="list-group-item"><i class="fa-solid fa-sink"></i></i>kitchen</li>
     </ul>
     <div class="card-body card-body-bottom">
     <p class="card-link">Total:<i class="fa-brands fa-bitcoin"></i><%= @van.cost %></p>

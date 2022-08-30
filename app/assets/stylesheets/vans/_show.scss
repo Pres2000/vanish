@@ -24,7 +24,7 @@
     border-bottom:1px transparent;
     font-size: 24px;
     letter-spacing: 3px;
-    
+
     }
 
     .list-group {
@@ -32,7 +32,7 @@
       border-bottom:1px transparent;
       font-size: 24px;
       letter-spacing: 3px;
-      
+
       }
 
       .card-link {
@@ -40,11 +40,16 @@
         letter-spacing: 3px;
       }
 
+
       .card-body-bottom {
         display: flex;
         justify-content: space-between;
         align-items: center;
         margin-bottom: 0;
+      }
+
+      p {
+        margin-left: 16px;
       }
 
       .btn-rent {
@@ -55,9 +60,9 @@
         text-decoration: none !important;
         display: flex;
         border: 1px solid transparent;
-      
+
       }
-      
+
       .btn-rent:hover
       {
         color: #000000;
@@ -66,3 +71,17 @@
         transition: opacity 0.3s ease;
       }
 
+      .fa-solid {
+        padding: 0 16px 0 0;
+      }
+
+      .list {
+        display: flex;
+        // justify-content: space-between;
+        // padding-right: 2rem;
+        margin: 0 auto 0 0;
+      }
+
+      .list > div:first-child {
+        margin-right: 8rem;
+      }
