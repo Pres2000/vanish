@@ -1,10 +1,17 @@
-<h1>Add a new Van</h1>
-<%= simple_form_for(@van) do |f| %>
-  <%= f.input :listing_title %>
-  <%= f.input :description %>
-  <%= f.input :photo, as: :file %>
-  <%= f.input :model %>
-  <%= f.input :year  %>
-  <%= f.input :bathroom %>
-  <!-- [...] -->
-<% end %>
+<div class="container">
+  <h1>Add a new Van</h1>
+    <%= simple_form_for(@van) do |f| %>
+      <%= f.input :listing_title %>
+      <%= f.input :description %>
+      <%= f.input :photo, as: :file %>
+      <%= f.input :model %>
+      <%= f.input :year  %>
+      <%= f.input :bathroom %>
+      <%= f.input :kitchen %>
+      <%= f.input :dimentions %>
+      <%= f.input :capacity %>
+      <%= f.input :cost %>
+      <!-- [...] -->
+      <%= f.button :submit %>
+    <% end %>
+</div>
