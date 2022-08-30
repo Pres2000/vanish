@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   # get "restaurants/:id", to: "restaurants#show", as: :restaurant
   get "vans", to: "vans#index", as: :vans
   get "vans/new", to: "vans#new", as: :new_vans
+  get "vans/:id", to: "vans#show", as: :van
   post "vans", to: "vans#create"
 end
 
