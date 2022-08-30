@@ -2,6 +2,10 @@
   background-size: cover;
   background-position: center;
   padding: 150px 0;
+  width: auto;
+  height: 100%;
+  background-position-y: 118%;
+ 
 }
 
 .banner h1 {
@@ -21,4 +25,25 @@
 
 .btn {
   color: white;
+}
+
+.btn-banner {
+  color: #ffffff;
+  padding: 8px 24px;
+  border-radius: 50px;
+  margin-right: 10px;
+  text-decoration: none !important;
+  display: flex;
+  border: 1px solid #ffffff;
+  display: inline-block;
+
+}
+
+.btn-banner:hover
+{
+  color: #ffcccc;
+  border: 1px solid #ffcccc;
+  padding: 8px 24px;
+  transition: opacity 0.3s ease;
+  display: inline-block;
 }
