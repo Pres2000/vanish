@@ -19,7 +19,7 @@
 
   2.times do
     title = Faker::TvShows::GameOfThrones.dragon
-    van = Van.create(listing_title: title, description: Faker::TvShows::GameOfThrones.quote, location: Faker::TvShows::GameOfThrones.city, cost: rand(20..200), model: "Ford", year: rand(1990..2022), dimentions: "4m x 2.5m", capacity: rand(2..5), fuel_type: "diesel", bathroom: false, kitchen: true  )
+    van = Van.create(listing_title: title, description: Faker::TvShows::GameOfThrones.quote, location: Faker::TvShows::GameOfThrones.city, cost: rand(20..200), model: "Ford", year: rand(1990..2022), dimentions: "4m x 2.5m", capacity: rand(2..5), fuel_type: "diesel", bathroom: false, kitchen: true, mileage: rand(50000..200000) )
     van.user = user
     filename = "#{title.strip}.jpeg"
     file = URI.open("https://loremflickr.com/320/240/camper,car")
