@@ -7,7 +7,7 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 
-10.times do
+5.times do
   fn = Faker::Movies::Hobbit.character
   ln = Faker::Movies::StarWars.character
   user = User.create(first_name: fn, last_name: ln, email: Faker::Internet.email, password: "123456", licence: Faker::DrivingLicence.northern_irish_driving_licence, bio: Faker::Games::WorldOfWarcraft.quote )
