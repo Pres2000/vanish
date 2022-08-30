@@ -54,3 +54,13 @@
   top: -20px;
   width: 40px;
 }
+
+.card-trip:hover {
+  width: 520px;
+  transition-duration: 500ms;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}

@@ -12,7 +12,7 @@
               <%#  <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
             <%#     <% end %>
         </div>
-            <h2 class="card-trip-pricing"><i class="fa-brands fa-bitcoin"></i> <%= van.cost %></h2>
+            <h2 class="card-trip-pricing"><i class="fa-brands fa-bitcoin"></i> <%= van.cost %>/night</h2>
           <%#   <img src="https://loremflickr.com/320/240/paris,girl/all" class="card-trip-user avatar-bordered" /> %>
           <%= cl_image_tag(van.user.photo.key, :class => "card-trip-user avatar-bordered", crop: :thumb, gravity: :face) %>
       </div>
