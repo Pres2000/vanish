@@ -81,3 +81,6 @@ gem "cloudinary"
 gem "faker"
 gem "open-uri"
 gem "simple_form", github: "heartcombo/simple_form"
+
+# Gemcode
+gem "geocoder"
