@@ -10,7 +10,7 @@
 
 .banner h1 {
   margin: 0;
-  color: white;
+  color: #ffffff;;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-size: 32px;
   font-weight: bold;
@@ -18,9 +18,11 @@
 
 .banner p {
   font-size: 20px;
-  color: white;
-  opacity: .7;
+  color: #ffffff;;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  margin-left: 0px !important;
+  margin-top: 1px;
+  text-shadow: 1px 1px #000000;
 }
 
 .btn {
@@ -36,7 +38,7 @@
   display: flex;
   border: 1px solid #ffffff;
   display: inline-block;
-
+  margin-top: 15px;
 }
 
 .btn-banner:hover
