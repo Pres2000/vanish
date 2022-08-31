@@ -8,6 +8,6 @@ class User < ApplicationRecord
   has_many :bookings
   # has_many :vans, through: :bookings, as: :booked_vans
 
-  validates :first_name, presence: true
-  validates :last_name, presence: true
+  # validates :first_name, presence: true
+  # validates :last_name, presence: true
 end
