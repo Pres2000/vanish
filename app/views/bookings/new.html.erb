@@ -1,0 +1,45 @@
+<div class="container-show">
+  <div class="card" style="width: 50rem;">
+    <%= cl_image_tag(@van.photos.first.key, class: "card-img-top") %>
+    <!-- trying to use cl_tag to select first photo
+    <img class="card-img-top" src="<% @van.photos.first %>" alt="photo of <% @van.listing_title %>">
+    -->
+    <div class="card-body">
+      <!-- here we need to get information from the back end to populate our cards -->
+      <h1 class="card-title"><%= @van.listing_title %></h1>
+    </div>
+    <%= simple_form_for([@van, @booking]) do |f| %>
+      <%# # <%= f.input :content %>
+
+    <ul class="booking-list">
+      <div>
+      <%# # start date %>
+      <%= f.input :starting_date  %>
+
+      </div>
+      <div>
+      <%# # end date %>
+      <%= f.input :end_date  %>
+
+      </div>
+      <%# # number of guest %>
+    </ul>
+    <ul class="booking-list">
+      <div>
+        <%= f.input :num_guests  %>
+      </div>
+      <div>
+      <br>
+      <%= f.submit "Submit booking", class: "btn btn-primary" %>
+      </div>
+    </ul>
+    <% end %>
+      <!-- add font-awesome icon before each value (for bath/kitchen add line-through if false) -->
+
+    <div class="card-body card-body-bottom">
+
+    <%# <p class="card-link">Total:<i class="fa-brands fa-bitcoin"></i><%= @van.cost </p> %>
+      <%# <a href="#" class="card-link btn-rent">Book</a> %>
+    </div>
+  </div>
+</div>
