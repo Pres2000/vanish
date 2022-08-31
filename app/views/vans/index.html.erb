@@ -1,7 +1,7 @@
 
 <div class="container-vanshowpage ">
   <% @vans.each do |van| %>
-  <a href= <%= "#{van.id}" %> >
+  <a href= <%= "vans/#{van.id}" %> >
     <div class="card-trip col-4">
     <% van.photos.each do |photo| %>
       <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
