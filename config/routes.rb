@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   get "vans/new", to: "vans#new", as: :new_vans
   get "vans/:id", to: "vans#show", as: :van
   post "vans", to: "vans#create"
+  get "vans/:id/booking", to: "bookings#new", as: :van_bookings
+  post "vans/:id/booking", to: "bookings#create"
 end
 
 
