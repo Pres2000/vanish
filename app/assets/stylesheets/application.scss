@@ -13,4 +13,8 @@
 
 @import "vans/show";
 @import "bookings/booking";
+
 @import "bookings/index";
+
+// Map Box search
+@import "@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder";
