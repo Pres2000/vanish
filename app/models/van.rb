@@ -4,6 +4,13 @@ class Van < ApplicationRecord
   has_many :users, through: :bookings
   has_many_attached :photos
 
+  include PgSearch::Model
+  pg_search_scope :search_by_model_and_location,
+                  against: %i[model location],
+                  using: {
+                    tsearch: { prefix: true }
+                  }
+
   validates :listing_title, presence: true
   geocoded_by :location
   after_validation :geocode, if: :will_save_change_to_location?
