@@ -22,6 +22,7 @@ class VansController < ApplicationController
   def create
     @van = Van.new(van_params)
     @van.user = current_user
+    #save photo
     if @van.save
       redirect_to van_path(@van), notice: "Van was successfully created."
     else
@@ -32,7 +33,7 @@ class VansController < ApplicationController
   private
 
   def van_params
-    params.require(:van).permit(:listing_title, :description, :model, :year, :bathroom, :kitchen, :dimentions, :capacity, :cost)
+    params.require(:van).permit(:listing_title, :description, :model, :year, :bathroom, :kitchen, :dimentions, :capacity, :cost, :photos)
     # params.require(:van).permit(%i[listing_title description location cost model year mileage dimentions capacity fuel_type bathroom kitchen])
   end
 end
