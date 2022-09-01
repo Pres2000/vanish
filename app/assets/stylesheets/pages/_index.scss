@@ -16,6 +16,7 @@
   padding: 10px;
   margin: 10px;
   border-radius: 15px;
+  height: 310px;
 }
 
 .card-trip > img {
@@ -59,7 +60,7 @@
 
 .card-trip:hover {
   width: 520px;
-  transition-duration: 500ms;
+  transition-duration: 100ms;
 }
 
 a {

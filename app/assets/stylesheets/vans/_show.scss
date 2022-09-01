@@ -18,8 +18,11 @@
   }
 
 .card-img-top {
-  border-radius: 8px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  overflow: none;
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
+  
   }
 
   .list-group-item {
@@ -63,6 +66,7 @@
         margin-right: 10px;
         text-decoration: none !important;
         display: flex;
+        background-color: #96ccf8;
         border: 1px solid transparent;
 
       }
@@ -70,9 +74,11 @@
       .btn-rent:hover
       {
         color: #000000;
-        border: 1px solid #000000;
-        padding: 8px 24px;
+        border: 1px solid #b5d8f5;
         transition: opacity 0.3s ease;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+      
       }
 
       .fa-solid {

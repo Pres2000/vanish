@@ -14,13 +14,13 @@
     <ul class="booking-list">
       <div>
       <%# # start date %>
-      <%= f.input :starting_date  %>
+      <%= f.input :starting_date, as: :date, html5: true  %>
+  
 
       </div>
       <div>
       <%# # end date %>
-      <%= f.input :end_date  %>
-
+      <%= f.input :end_date, as: :date, html5: true  %>
       </div>
       <%# # number of guest %>
     </ul>
@@ -30,7 +30,7 @@
       </div>
       <div>
       <br>
-      <%= f.submit "Submit booking", class: "btn btn-primary" %>
+      <%= f.submit "Submit booking", class: "btn-checkout_book" %>
       </div>
     </ul>
     <% end %>
