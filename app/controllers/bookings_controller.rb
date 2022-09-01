@@ -18,7 +18,7 @@ class BookingsController < ApplicationController
   private
 
   def set_booking
-    @van = Van.find(params[:id])
+    @van = Van.find(params[:van_id])
   end
   def booking_params
     params.require(:booking).permit(:starting_date, :end_date, :num_guests)
