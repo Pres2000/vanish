@@ -1,5 +1,12 @@
 
 <div class="container-vanshowpage ">
+  <%= form_with url: vans_path, method: :get, class: "d-flex" do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "Find a van" %>
+    <%= submit_tag "Search", class: "btn btn-primary" %>
+  <% end %>
   <% @vans.each do |van| %>
   <a href= <%= "vans/#{van.id}" %> >
     <div class="card-trip col-4">
