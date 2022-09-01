@@ -1,5 +1,10 @@
 class BookingsController < ApplicationController
   before_action :set_booking, only: [:new, :create]
+
+  def index
+    @user_bookings = current_user.bookings
+  end
+
   def new
     @booking = Booking.new
   end
