@@ -6,10 +6,11 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   # get "restaurants/:id", to: "restaurants#show", as: :restaurant
-  get "vans", to: "vans#index", as: :vans
-  get "vans/new", to: "vans#new", as: :new_vans
-  get "vans/:id", to: "vans#show", as: :van
-  post "vans", to: "vans#create"
+  # get "vans", to: "vans#index", as: :vans
+  # get "vans/new", to: "vans#new", as: :new_vans
+  # get "vans/:id", to: "vans#show", as: :van
+  # post "vans", to: "vans#create"
+  resources :vans, only: [:index, :show, :new, :create]
 end
 
 
