@@ -27,7 +27,8 @@
     </ul>
     <div class="card-body card-body-bottom">
     <p class="card-link">Total:<i class="fa-brands fa-bitcoin"></i><%= @van.cost %></p>
-      <a href="#" class="card-link btn-rent">Rent</a>
+
+      <%= link_to "Rent", new_van_booking_path(@van), class: "card-link btn-rent" %>
     </div>
   </div>
 </div>

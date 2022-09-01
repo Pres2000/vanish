@@ -4,6 +4,9 @@
   margin: 0 auto;
   border-radius: 25px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  font: helvetica;
+  margin-bottom: 15px;
+  margin-top: 8px;
   }
 
   .container-show2 {
@@ -15,7 +18,7 @@
   }
 
 .card-img-top {
-  border-radius: 15px;
+  border-radius: 8px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   }
 
@@ -23,7 +26,7 @@
     border-top:1px transparent;
     border-bottom:1px transparent;
     font-size: 24px;
-    letter-spacing: 3px;
+    letter-spacing: 1px;
 
     }
 
@@ -50,6 +53,7 @@
 
       p {
         margin-left: 16px;
+    
       }
 
       .btn-rent {

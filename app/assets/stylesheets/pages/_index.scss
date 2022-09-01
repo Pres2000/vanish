@@ -15,12 +15,14 @@
   width: 500px;
   padding: 10px;
   margin: 10px;
+  border-radius: 15px;
 }
 
 .card-trip > img {
   height: 200px;
   width: 100%;
   object-fit: cover;
+  border-radius: 8px;
 }
 
 .card-trip h2 {
