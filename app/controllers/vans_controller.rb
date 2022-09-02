@@ -3,13 +3,16 @@ class VansController < ApplicationController
 
   def index
     if params[:query].present?
-      sql_query = <<~SQL
-        vans.listing_title @@ :query
-        OR vans.location @@ :query
-        OR vans.description @@ :query
-        OR vans.model @@ :query
-      SQL
-      @vans = Van.joins(:users).where(sql_query, query: "%#{params[:query]}%")
+      # sql_query = <<~SQL
+      #   vans.listing_title @@ :query
+      #   OR vans.location @@ :query
+      #   OR vans.description @@ :query
+      #   OR vans.model @@ :query
+      #   OR users.first_name @@ :query
+      #   OR users.last_name @@ :query
+      # SQL
+      # @vans = Van.joins(:users).where(sql_query, query: "%#{params[:query]}%")
+      @vans = Van.search_by_model_and_location("#{params[:query]}")
     else
       @vans = Van.all
     end

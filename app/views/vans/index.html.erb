@@ -1,11 +1,11 @@
-<div class="container">
+<div class="container nb-search-bar">
   <%= form_with url: vans_path, method: :get, class: "d-flex" do %>
     <%= text_field_tag :query,
       params[:query],
-      class: "form-control",
+      class: "form-control nb-rounded-left",
       placeholder: "Find a van"
     %>
-    <%= submit_tag "Search", class: "btn btn-primary" %>
+    <%= submit_tag "Search", class: "btn btn-primary nb-rounded-right" %>
   <% end %>
 </div>
 <div class="d-flex justify-content-between">

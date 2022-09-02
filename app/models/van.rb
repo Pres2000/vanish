@@ -6,7 +6,10 @@ class Van < ApplicationRecord
 
   include PgSearch::Model
   pg_search_scope :search_by_model_and_location,
-                  against: %i[model location],
+                  against: %i[model location listing_title description],
+                  associated_against: {
+                    user: [ :first_name, :last_name ]
+                  },
                   using: {
                     tsearch: { prefix: true }
                   }
