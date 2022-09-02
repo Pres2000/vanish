@@ -31,3 +31,8 @@
   flex-direction: column;
   min-height: 100vh;
 }
+
+p, h1, h2, h3 {
+    font-family: $app-font;
+
+}
