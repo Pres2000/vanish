@@ -2,7 +2,6 @@
   margin: 0 auto;
   border-radius: 25px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  font: helvetica;
   margin-bottom: 15px;
   margin-top: 8px;
   height: 950px !important;
@@ -14,6 +13,10 @@
 //   justify-content: space-between;
 //   margin-right: 10px;
 // }
+
+.card-trip-booking {
+  width: 350px;
+}
 
 .booking-list {
   display: flex;

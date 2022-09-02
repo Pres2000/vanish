@@ -19,6 +19,7 @@
   border-radius: 15px;
   height: 310px;
   width: 100%;
+  margin: 15px;
 }
 
 .card-trip > img {
@@ -60,12 +61,16 @@
   width: 40px;
 }
 
-.card-trip:hover {
-  width: 520px;
-  transition-duration: 100ms;
-}
+//.card-trip:hover {
+//  width: 520px;
+//  transition-duration: 100ms;
+//}
 
 a {
   text-decoration: none;
   color: black;
+}
+
+.top-margin {
+  margin: 0 20px;
 }
