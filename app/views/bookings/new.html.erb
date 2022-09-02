@@ -32,11 +32,14 @@
         <div>
           <%= f.input :num_guests, input_html: {value: '1'}  %>
         </div>
-        <p data-total-target="cost"> <%= @van.cost %> </p>
-        <p data-total-target="final">
-          <%# <% (@booking.end_date - @booking.starting_date).to_i * @van.cost %>
-          <%# <%= :end_date - :starting_date * :cost  %>
-        </p>
+        <div class="total-sum">
+          <p class="total-text">Total:</p>
+          <p><i class="fa-brands fa-bitcoin"></i></p>
+          <p data-total-target="final">
+            <%# <% (@booking.end_date - @booking.starting_date).to_i * @van.cost %>
+            <%# <%= :end_date - :starting_date * :cost  %>
+          </p>
+        </div>
 
         
       </ul>
@@ -45,6 +48,7 @@
 
       <div class="center">
         <%= f.submit "Submit booking", class: "btn-checkout_book" %>
+        <p class="cost" data-total-target="cost"> <%= @van.cost %> </p>
       </div>
       <% end %>
     </div>
