@@ -69,3 +69,16 @@ a {
   text-decoration: none;
   color: black;
 }
+
+.nb-search-bar {
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+
+.nb-rounded-left {
+  border-radius: 50px 0 0 50px;
+}
+
+.nb-rounded-right {
+  border-radius: 0 50px 50px 0;
+}
