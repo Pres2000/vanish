@@ -78,7 +78,7 @@ input[type="date"]:hover{
 
 #card-new-booking {
   width: 54rem !important;
-  height: 100rem !important;
+  height: 70rem !important;
 }
 
 .nb-rounded {
@@ -90,9 +90,16 @@ input[type="date"]:hover{
 .nb-model {
   display: flex;
   justify-content: left;
-  margin-right: 5rem;
 }
 
 .card-booking {
   height: 350px;
+}
+
+.nb-space-right {
+  margin-right: 30px;
+}
+
+.nb-cost {
+  display: flex;
 }
