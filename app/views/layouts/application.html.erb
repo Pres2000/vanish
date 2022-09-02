@@ -11,12 +11,19 @@
   </head>
 
   <body>
-    <% unless current_page?(root_path) %>
-    <%= render "layouts/navbar" %>
-    <% end %>
+    <div class="wrapper">
+      <div>
+        <% unless current_page?(root_path) %>
+        <%= render "layouts/navbar" %>
+        <% end %>
+      </div>
+      <%= yield %>
+      <div>
+        <%= render "layouts/footer" %>
+      </div>
+    </div>
+
     <%= render "shared/flashes" %>
-    <%= yield %>
-    <%= render "layouts/footer" %>
     <script src="https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js"></script>
   </body>
 </html>
