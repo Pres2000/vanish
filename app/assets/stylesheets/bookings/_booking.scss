@@ -2,7 +2,6 @@
   margin: 0 auto;
   border-radius: 25px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  font: helvetica;
   margin-bottom: 15px;
   margin-top: 8px;
   height: 950px !important;
@@ -14,6 +13,10 @@
 //   justify-content: space-between;
 //   margin-right: 10px;
 // }
+
+.card-trip-booking {
+  width: 350px;
+}
 
 .booking-list {
   display: flex;
@@ -85,15 +88,17 @@ font-size: 26px;
 display: flex !important;
 border: 2px transparent;
 font-size: 20px;
-padding: 8px 24px;
+padding: 11px 50px;
 background-color: rgba(211, 211, 211, 0.4);
-text-align: center;
 margin-top: 29px;
 height: 50px;
+margin-right: 15px;
 }
 
 .total-text{
-  background-position-y: 118%;
+  text-align: left;
+  justify-content: left;
+  
 
 }
 #card-new-booking {
