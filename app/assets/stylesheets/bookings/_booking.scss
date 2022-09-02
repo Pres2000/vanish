@@ -75,3 +75,20 @@ input[type="date"]:hover{
   display: flex;
   justify-content: center;
 }
+
+#card-new-booking {
+  width: 54rem !important;
+  height: 100rem !important;
+}
+
+.nb-rounded {
+  border-radius: 50px;
+  margin-top: 0.2rem;
+  margin-bottom: 2rem;
+}
+
+.nb-model {
+  display: flex;
+  justify-content: left;
+  margin-right: 5rem;
+}

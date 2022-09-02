@@ -1,17 +1,30 @@
-<div class="container">
-  <h1>Add a new Van</h1>
-    <%= simple_form_for(@van) do |f| %>
-      <%= f.input :listing_title %>
-      <%= f.input :description %>
-      <%= f.input :photos, as: :file %>
-      <%= f.input :model %>
-      <%= f.input :year  %>
-      <%= f.input :bathroom %>
-      <%= f.input :kitchen %>
-      <%= f.input :dimentions %>
-      <%= f.input :capacity %>
-      <%= f.input :cost %>
-      <!-- [...] -->
-      <%= f.button :submit %>
-    <% end %>
+<div class="container-show">
+  <div class="card" id="card-new-booking">
+    <div class="card-body">
+      <h1 class="card-title">Please, fill the form to rent your van</h1>
+          <%= simple_form_for(@van) do |f| %>
+            <%= f.input :listing_title, label: "Give a name to your van:", input_html: { class: 'nb-rounded' } %>
+            <%= f.input :location, label: "Give the address where to pickup your van :", input_html: { class: 'nb-rounded' } %>
+            <%= f.input :photos, as: :file, input_html: { class: 'nb-rounded' } %>
+            <div class="nb-model">
+              <%= f.input :model, label: "Model of your van (Ford Transit, Volkswage California...)", input_html: { class: 'nb-rounded' } %>
+              <%= f.input :year, label: "Model Year", input_html: { class: 'nb-rounded' }  %>
+            </div>
+            <div class="nb-model">
+            <%= f.input :capacity, label: "How many people can sleep inside ?", input_html: { class: 'nb-rounded' } %>
+            <%= f.input :dimentions, label: "How big is your van ? (W x H)", input_html: { class: 'nb-rounded' } %>
+            </div>
+            <p class="nb-rounded">Select the equipment :</p>
+            <div class="nb-model">
+            <%= f.input :bathroom, input_html: { class: 'nb-rounded' } %>
+            <%= f.input :kitchen, input_html: { class: 'nb-rounded' } %>
+             </div>
+
+            <%= f.input :cost, input_html: { class: 'nb-rounded' } %>
+            <%= f.input :description, input_html: { class: 'nb-rounded' } %>
+            <!-- [...] -->
+            <%= f.button :submit %>
+          <% end %>
+    </div>
+  </div>
 </div>
