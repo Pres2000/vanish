@@ -7,23 +7,33 @@
             <%= f.input :location, label: "Give the address where to pickup your van :", input_html: { class: 'nb-rounded' } %>
             <%= f.input :photos, as: :file, input_html: { class: 'nb-rounded' } %>
             <div class="nb-model">
-              <%= f.input :model, label: "Model of your van (Ford Transit, Volkswage California...)", input_html: { class: 'nb-rounded' } %>
+              <div class="nb-space-right">
+                <%= f.input :model, label: "Model of your van (Ford Transit, Volkswage California...)", input_html: { class: 'nb-rounded' } %>
+              </div>
               <%= f.input :year, label: "Model Year", input_html: { class: 'nb-rounded' }  %>
             </div>
             <div class="nb-model">
-            <%= f.input :capacity, label: "How many people can sleep inside ?", input_html: { class: 'nb-rounded' } %>
+              <div class="nb-space-right">
+                <%= f.input :capacity, label: "How many people can sleep inside ?", input_html: { class: 'nb-rounded' } %>
+              </div>
             <%= f.input :dimentions, label: "How big is your van ? (W x H)", input_html: { class: 'nb-rounded' } %>
             </div>
-            <p class="nb-rounded">Select the equipment :</p>
+            <p class="nb-rounded">Select the equipments :</p>
             <div class="nb-model">
-            <%= f.input :bathroom, input_html: { class: 'nb-rounded' } %>
+              <div class="nb-space-right">
+                <%= f.input :bathroom, input_html: { class: 'nb-rounded' } %>
+              </div>
             <%= f.input :kitchen, input_html: { class: 'nb-rounded' } %>
              </div>
-
-            <%= f.input :cost, input_html: { class: 'nb-rounded' } %>
+            <div class="nb-cost">
+              <%= f.input :cost, label: "Enter the price per night", input_html: { class: 'nb-rounded' } %>
+              <i class="fa-brands fa-bitcoin"></i>
+            </div>
             <%= f.input :description, input_html: { class: 'nb-rounded' } %>
             <!-- [...] -->
-            <%= f.button :submit %>
+            <div class="center">
+              <%= f.submit "Rent my van", class: "btn-checkout_book" %>
+            </div>
           <% end %>
     </div>
   </div>
