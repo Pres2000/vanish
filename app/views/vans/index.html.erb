@@ -1,36 +1,30 @@
-
-<div class="container-vanshowpage ">
-  <%= form_with url: vans_path, method: :get, class: "d-flex" do %>
-    <%= text_field_tag :query,
-      params[:query],
-      class: "form-control",
-      placeholder: "Find a van" %>
-    <%= submit_tag "Search", class: "btn btn-primary" %>
-  <% end %>
-  <% @vans.each do |van| %>
-  <a href= <%= "vans/#{van.id}" %> >
-    <div class="card-trip col-4">
-    <% van.photos.each do |photo| %>
-      <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
-     <% end  %>
-      <div class="card-trip-infos">
-        <div>
-            <h2> <%= van.listing_title %> </h2>
-              <p><%= van.description %></p>
-            <%#   <% van.photos.each do |photo| %>
-              <%#  <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
-            <%#     <% end %>
+<div class="d-flex justify-content-between">
+  <div class="container-vanshowpage " style="width:40vw;">
+    <% @vans.each do |van| %>
+    <a href= <%= "vans/#{van.id}" %> >
+      <div class="card-trip col-4">
+      <% van.photos.each do |photo| %>
+        <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+      <% end  %>
+        <div class="card-trip-infos">
+          <div>
+              <h2> <%= van.listing_title %> </h2>
+                <p><%= van.description %></p>
+              <%#   <% van.photos.each do |photo| %>
+                <%#  <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+              <%#     <% end %>
+          </div>
+              <h2 class="card-trip-pricing"><i class="fa-brands fa-bitcoin"></i> <%= van.cost %>/night</h2>
+            <%#   <img src="https://loremflickr.com/320/240/paris,girl/all" class="card-trip-user avatar-bordered" /> %>
+            <%= cl_image_tag(van.user.photo.key, :class => "card-trip-user avatar-bordered", crop: :thumb, gravity: :face) %>
         </div>
-            <h2 class="card-trip-pricing"><i class="fa-brands fa-bitcoin"></i> <%= van.cost %>/night</h2>
-          <%#   <img src="https://loremflickr.com/320/240/paris,girl/all" class="card-trip-user avatar-bordered" /> %>
-          <%= cl_image_tag(van.user.photo.key, :class => "card-trip-user avatar-bordered", crop: :thumb, gravity: :face) %>
       </div>
+      </a>
+      <% end %>
     </div>
-    </a>
-    <% end %>
-      <div style="width: 100%; height: 600px;"
-        data-controller="map"
-        data-map-markers-value="<%= @markers.to_json %>"
-        data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
-    </div>
+  <div style="width: 40vw; height: 100vh; position: sticky; top: 0;"
+    data-controller="map"
+    data-map-markers-value="<%= @markers.to_json %>"
+    data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
+</div>

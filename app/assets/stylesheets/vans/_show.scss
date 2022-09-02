@@ -24,7 +24,8 @@
   overflow: none;
   border-top-right-radius: 25px;
   border-top-left-radius: 25px;
-  
+  height: 400px;
+  object-fit: cover;
   }
 
   .list-group-item {
@@ -58,7 +59,7 @@
 
       p {
         margin-left: 16px;
-    
+
       }
 
       .btn-rent {
@@ -80,7 +81,7 @@
         transition: opacity 0.3s ease;
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
-      
+
       }
 
       .fa-solid {
