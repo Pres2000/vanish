@@ -76,6 +76,27 @@ input[type="date"]:hover{
   justify-content: center;
 }
 
+.cost {
+color: transparent;
+
+}
+
+.total-sum{
+font-size: 26px;
+display: flex !important;
+border: 2px transparent;
+font-size: 20px;
+padding: 8px 24px;
+background-color: rgba(211, 211, 211, 0.4);
+text-align: center;
+margin-top: 29px;
+height: 50px;
+}
+
+.total-text{
+  background-position-y: 118%;
+
+}
 #card-new-booking {
   width: 54rem !important;
   height: 100rem !important;
