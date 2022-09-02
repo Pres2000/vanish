@@ -2,7 +2,17 @@ class VansController < ApplicationController
   skip_before_action :authenticate_user!, only: :index
 
   def index
-    @vans = Van.all
+    if params[:query].present?
+      sql_query = <<~SQL
+        vans.listing_title @@ :query
+        OR vans.location @@ :query
+        OR vans.description @@ :query
+        OR vans.model @@ :query
+      SQL
+      @vans = Van.joins(:users).where(sql_query, query: "%#{params[:query]}%")
+    else
+      @vans = Van.all
+    end
     @markers = @vans.geocoded.map do |van|
       {
         lat: van.latitude,
