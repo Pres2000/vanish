@@ -14,5 +14,20 @@
 @import "vans/show";
 @import "bookings/booking";
 
+// css for your bookings index page
+@import "bookings/bookings";
+
 // Map Box search
 @import "@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder";
+
+.container-center {
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  min-height: 100vh;
+}
