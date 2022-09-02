@@ -17,7 +17,7 @@ class VansController < ApplicationController
       {
         lat: van.latitude,
         lng: van.longitude,
-        info_window: render_to_string(partial: "info_window", locals: {van: van}),
+        info_window: render_to_string(partial: "info_window", locals: { van: van }),
         image_url: helpers.asset_url("vanish_logo.png")
       }
     end
