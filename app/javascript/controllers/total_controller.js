@@ -15,7 +15,10 @@ static targets = ["start", "end", "final", "cost"]
     const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24)); 
     const finalCost = diffDays * cost
     // console.log(finalTotalTarget)
-    this.finalTarget.innerHTML=`${finalCost}` 
-
+    if (finalCost) { this.finalTarget.innerHTML=`${finalCost}` 
+    } else {
+    this.finalTarget.innerHTML= " "
+    }
+    
   }
 }
