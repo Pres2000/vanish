@@ -84,3 +84,6 @@ gem "simple_form", github: "heartcombo/simple_form"
 
 # Gemcode
 gem "geocoder"
+
+#pg_search
+gem "pg_search"

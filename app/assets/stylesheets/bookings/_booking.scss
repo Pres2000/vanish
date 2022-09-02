@@ -1,21 +1,52 @@
 
+.card {
+  margin: 0 auto;
+  border-radius: 25px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  font: helvetica;
+  margin-bottom: 15px;
+  margin-top: 8px;
+  height: 950px !important;
+  width: 672px !important;
+  }
+
+// .booking-list {
+//   display: flex;
+//   justify-content: space-between;
+//   margin-right: 10px;
+// }
+
 .booking-list {
   display: flex;
   justify-content: space-between;
   margin-right: 10px;
 }
 
+#booking_num_guests {
+  border: 2px solid #96ccf8;;
+  border-radius: 50px;
+  font-size: 20px;
+  padding: 8px 24px;
+  width: 237.33px;
+  height: 50px;
+  margin-bottom: -5px;
+}
+
+#booking_num_guests:hover {
+  background-color: rgba(175, 217, 254, .4);
+}
+
+
+
 .btn-checkout_book {
   color: #000000;
   padding: 8px 24px;
   border-radius: 50px;
-  margin-right: 10px;
   text-decoration: none !important;
-  display: flex;
   background-color: #96ccf8;
   border: 1px solid transparent;
-  font-size: 22px;
-
+  font-size: 26px;
+  margin-top: 15px;
 }
 
 .btn-checkout_book:hover
@@ -38,4 +69,9 @@ padding: 8px 24px;
 input[type="date"]:hover{
   background-color: rgba(175, 217, 254, .4);
 
+}
+
+.center {
+  display: flex;
+  justify-content: center;
 }

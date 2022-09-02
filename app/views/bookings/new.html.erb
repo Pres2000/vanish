@@ -8,32 +8,46 @@
       <!-- here we need to get information from the back end to populate our cards -->
       <h1 class="card-title"><%= @van.listing_title %></h1>
     </div>
-    <%= simple_form_for([@van, @booking]) do |f| %>
-      <%# # <%= f.input :content %>
+    <div data-controller="total">
+      <%= simple_form_for([@van, @booking]) do |f| %>
+        <%# # <%= f.input :content %>
+    
 
-    <ul class="booking-list">
-      <div>
-      <%# # start date %>
-      <%= f.input :starting_date, as: :date, html5: true  %>
-  
+      <ul class="booking-list">
+        <div>
+        <%# # start date %>
+        <%= f.input :starting_date, as: :date, html5: true, input_html: {data: {"total-target" => "start", action: "change->total#calculate"}} %>
+    
 
-      </div>
-      <div>
-      <%# # end date %>
-      <%= f.input :end_date, as: :date, html5: true  %>
-      </div>
-      <%# # number of guest %>
+        </div>
+        <div>
+        <%# # end date %>
+        <%= f.input :end_date, as: :date, html5: true, input_html: {data: {"total-target" => "end", action: "change->total#calculate"}} %>
+        </div>
+        <%# # number of guest %>
+      </ul>
+
     </ul>
-    <ul class="booking-list">
-      <div>
-        <%= f.input :num_guests  %>
+      <ul class="booking-list">
+        <div>
+          <%= f.input :num_guests, input_html: {value: '1'}  %>
+        </div>
+        <p data-total-target="cost"> <%= @van.cost %> </p>
+        <p data-total-target="final">
+          <%# <% (@booking.end_date - @booking.starting_date).to_i * @van.cost %>
+          <%# <%= :end_date - :starting_date * :cost  %>
+        </p>
+
+        
+      </ul>
+
+
+
+      <div class="center">
+        <%= f.submit "Submit booking", class: "btn-checkout_book" %>
       </div>
-      <div>
-      <br>
-      <%= f.submit "Submit booking", class: "btn-checkout_book" %>
-      </div>
-    </ul>
-    <% end %>
+      <% end %>
+    </div>
       <!-- add font-awesome icon before each value (for bath/kitchen add line-through if false) -->
 
     <div class="card-body card-body-bottom">
